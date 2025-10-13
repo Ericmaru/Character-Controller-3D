@@ -67,6 +67,11 @@ public class LayerController : MonoBehaviour
             Jump();
         }
         Gravity();
+
+        if(_aimAction.WasPerformedThisFrame())
+        {
+            Attack();
+        }
     }
 
     void Movement()
@@ -159,5 +164,19 @@ public class LayerController : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(_sensor.position, _sensorRadius);
+    }
+
+    void Attack()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(_lookInput);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        {
+            IDamageable damageable = hit.transform.GetComponent<IDamageable>();
+            if(damageable != null)
+            {
+                damageable.TakeDamage();
+            }        
+        }
     }
 }
