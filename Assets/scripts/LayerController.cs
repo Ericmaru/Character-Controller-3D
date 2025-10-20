@@ -15,6 +15,7 @@ public class LayerController : MonoBehaviour
     private Vector2 _lookInput;
     private InputAction _aimAction;
 
+    //Floats
     [SerializeField] private float _movementSpeed = 5;
     [SerializeField] private float _jumpHeight = 2;
     [SerializeField] private float _smoothTime = 0.2f;
