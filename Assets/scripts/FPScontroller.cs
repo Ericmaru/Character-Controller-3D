@@ -64,12 +64,12 @@ public class FPScontroller : MonoBehaviour
         _lookAtCamera.localRotation = Quaternion.Euler(_xRotation, 0, 0);
         //_lookAtCamera.Rotate(Vector3.right, mouseY);
 
-        if(direcrtion != Vector3.zero)
+        /*if(direction != Vector3.zero)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _mainCamera.eulerAngles.y;
             Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
             _controller.Move(moveDirection * _movementSpeed * _smoothTime.deltaTime);
-        }
+        }*/
     }
 
     // Update is called once per frame
