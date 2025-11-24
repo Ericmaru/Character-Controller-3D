@@ -216,7 +216,7 @@ public class LayerController : MonoBehaviour
             IDamageable damageable = hit.transform.GetComponent<IDamageable>();
             if (damageable != null)
             {
-                damageable.TakeDamage();
+                //damageable.TakeDamage();
             }
         }
     }
@@ -318,7 +318,7 @@ public class LayerController : MonoBehaviour
 
             if (damageable != null)
             {
-                damageable.TakeDamage(5);
+                //damageable.TakeDamage(5);
             }
         }
 

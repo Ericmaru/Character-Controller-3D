@@ -8,7 +8,7 @@ public class Box : MonoBehaviour, IGrabeable, IDamageable
         Debug.Log("Coger Caja");
     }
 
-    public void TakeDamge(float damage)
+    public void TakeDamage(float damage)
     {
         _health -= damage;
         if(_health <= 0)
